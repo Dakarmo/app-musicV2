@@ -1,1 +1,39 @@
-<h2 class="font-bold text-3xl text-center my-2">{{title}}</h2>
+<h2 class="font-bold text-3xl text-center my-2">
+    {{title}}
+</h2>
+
+<article *ngFor="let album of Albums" class="border bg-[#06202A]/50 my-5 max-w-2xl mx-auto p-2 rounded-md">
+    <div class="py-4 border-b">{{album.ref}}</div>
+    <h3 class="text-2xl text-white my-4">{{album.title}}</h3>
+    <p class="text-justify">{{album.description}}</p>
+    <ul class="flex gap-2 md:gap-4 flex-wrap mt-4">
+        <li *ngFor="let tag of album.tags" class="boder px-4 py-1 bg-teal-700 rounded-md ">{{tag}}</li>
+    </ul>
+    <div class="mt-5 flex gap-2 md:gap-4">
+        <button class="border border-white py-1 px-4 hover:bg-gray-300 hover:text-black rounded-md">en</button>
+        <p>{{album.like}}</p>
+        <p>{{album.duration}}</p>
+        <button class="border border-white py-1 px-4 hover:bg-gray-300 hover:text-black rounded-md">Details</button>
+    </div>
+    
+</article>
+
+<!-- <h2 class="font-bold text-3xl text-center my-2">
+    {{ title }}
+</h2>
+<div class="flex justify-center items-center h-screen">
+
+    <article *ngFor="let album of Albums" class="my-4 p-4 border border-gray-300 rounded-lg">
+        <div class="font-bold text-xl">{{ album.ref }}</div>
+        <h3 class="text-lg font-semibold">{{ album.title }}</h3>
+        <p class="text-gray-600">{{ album.description }}</p>
+        <ul class="list-disc mt-2 ml-4">
+            <li *ngFor="let tag of album.tags" class="text-blue-500">{{ tag }}</li>
+        </ul>
+        <button class="bg-blue-500 text-white px-4 py-2 mt-4">en</button>
+        <p class="mt-2">{{ album.like }} Likes</p>
+        <p class="text-gray-500">{{ album.duration }}</p>
+        <button class="bg-gray-800 text-white px-4 py-2 mt-2">Details</button>
+    </article>
+</div> -->
+
