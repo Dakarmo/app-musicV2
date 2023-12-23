@@ -36,3 +36,5 @@ style.css
 # export const ALBUMS: Album[] //Module
 
 # quicktype.io
+
+# git log --oneline
