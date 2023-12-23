@@ -26,3 +26,13 @@ style.css
 # Pour faire  un premier commit sur git
     git config user.name "John Doe"
     git config user.email "johndoe@exemple.com"
+
+# Commande pour faire un commit sur git
+    git add .
+    git commit -m "message du commit"
+    git push origin nomDeLaBranche
+
+
+# export const ALBUMS: Album[] //Module
+
+# quicktype.io
