@@ -38,3 +38,14 @@ style.css
 # quicktype.io
 
 # git log --oneline
+
+# Matérial icon
+material angular
+    ng add @angular/material
+https://fonts.google.com/icons
+
+dans appModule :
+
+    import { MatIconModule } from '@angular/material/icon';
+
+    MatIconModule
