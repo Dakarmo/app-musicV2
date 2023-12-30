@@ -1,9 +1,9 @@
 <div class="md:flex">
     <div>
-        <app-album-detail></app-album-detail>
+        <app-album-detail [album]="selectedAlbum"></app-album-detail>
     </div>
 
-    <div class="mt-7">
+    <div class="mt-7 flex-1">
         <h2 class="font-bold text-3xl text-center my-2">
             {{title}}
         </h2>
@@ -37,7 +37,9 @@
                     </mat-icon>
                     {{album.duration}} min
                 </p>
-                <button class="border border-white py-1 px-4 hover:bg-gray-300 hover:text-black rounded-md">Details</button>
+                <button (click) =onSelect(album) class="border border-white py-1 px-4 hover:bg-gray-300 hover:text-black rounded-md">
+                    Details
+                </button>
             </div>
             
         </article>

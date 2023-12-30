@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Album } from '../../album';
 
 @Component({
   selector: 'app-album-detail',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './album-detail.component.css'
 })
 export class AlbumDetailComponent {
-
+  @Input() album: Album | undefined;
 }
