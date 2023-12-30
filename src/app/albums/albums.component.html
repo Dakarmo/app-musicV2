@@ -1,40 +1,51 @@
-<h2 class="font-bold text-3xl text-center my-2">
-    {{title}}
-</h2>
+<div class="md:flex">
+    <div>
+        <app-album-detail></app-album-detail>
+    </div>
 
-<article *ngFor="let album of Albums" class="border bg-[#06202A]/50 my-5 max-w-2xl mx-auto p-2 rounded-md">
-    <div class="py-4 border-b">{{album.ref}}</div>
-    <h3 class="text-2xl text-white my-4">{{album.title}}</h3>
-    <p class="text-justify">{{album.description}}</p>
-    <ul *ngIf="album.tags" class="flex gap-2 md:gap-4 flex-wrap mt-4">
-        <li *ngFor="let tag of album.tags" class="boder px-4 py-1 bg-teal-700 rounded-md ">{{tag}}</li>
-    </ul>
-    <div class="mt-5 flex gap-2 md:gap-4">
-        <button class="border border-white py-1 px-4 hover:bg-gray-300 hover:text-black rounded-md">en</button>
-       
-        <p *ngIf="album.like" class="flex items-center gap-1">
-             <!-- Coeur -->
-            <mat-icon>
-                <span class="material-symbols-outlined">
-                    favorite
-                </span>
-            </mat-icon>
-            {{album.like}}
-        </p>
-      
-        <p class="flex items-center gap-1">
-              <!-- time -->
-            <mat-icon>
-                <span class="material-symbols-outlined">
-                    schedule
-                </span>
-            </mat-icon>
-            {{album.duration}} min
-        </p>
-        <button class="border border-white py-1 px-4 hover:bg-gray-300 hover:text-black rounded-md">Details</button>
+    <div class="mt-7">
+        <h2 class="font-bold text-3xl text-center my-2">
+            {{title}}
+        </h2>
+        
+        <article *ngFor="let album of Albums" class="border bg-[#06202A]/50 my-5 max-w-2xl mx-auto p-2 rounded-md">
+            <div class="py-4 border-b">{{album.ref}}</div>
+            <h3 class="text-2xl text-white my-4">{{album.title}}</h3>
+            <p class="text-justify">{{album.description}}</p>
+            <ul *ngIf="album.tags" class="flex gap-2 md:gap-4 flex-wrap mt-4">
+                <li *ngFor="let tag of album.tags" class="boder px-4 py-1 bg-teal-700 rounded-md ">{{tag}}</li>
+            </ul>
+            <div class="mt-5 flex gap-2 md:gap-4">
+                <button class="border border-white py-1 px-4 hover:bg-gray-300 hover:text-black rounded-md">en</button>
+               
+                <p *ngIf="album.like" class="flex items-center gap-1">
+                     <!-- Coeur -->
+                    <mat-icon>
+                        <span class="material-symbols-outlined">
+                            favorite
+                        </span>
+                    </mat-icon>
+                    {{album.like}}
+                </p>
+              
+                <p class="flex items-center gap-1">
+                      <!-- time -->
+                    <mat-icon>
+                        <span class="material-symbols-outlined">
+                            schedule
+                        </span>
+                    </mat-icon>
+                    {{album.duration}} min
+                </p>
+                <button class="border border-white py-1 px-4 hover:bg-gray-300 hover:text-black rounded-md">Details</button>
+            </div>
+            
+        </article>
     </div>
     
-</article>
+
+</div>
+
 
 <!-- <h2 class="font-bold text-3xl text-center my-2">
     {{ title }}
