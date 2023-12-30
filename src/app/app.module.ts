@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { AlbumsComponent } from './albums/albums.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { AlbumDetailComponent } from './album-details/album-detail/album-detail.component';
+import { IconButtonComponent } from './icon-button/icon-button/icon-button.component';
 
 
 
@@ -13,6 +15,8 @@ import { MatIconModule } from '@angular/material/icon';
   declarations: [
     AppComponent,
     AlbumsComponent,
+    AlbumDetailComponent,
+    IconButtonComponent,
     
   ],
   imports: [

@@ -35,7 +35,8 @@ style.css
 
 # export const ALBUMS: Album[] //Module
 
-# quicktype.io
+# quicktype.io 
+    install pare json in any language
 
 # git log --oneline
 
@@ -44,8 +45,32 @@ material angular
     ng add @angular/material
 https://fonts.google.com/icons
 
-dans appModule :
+dans app.module.ts :ng
 
     import { MatIconModule } from '@angular/material/icon';
 
-    MatIconModule
+    imports: [
+        MatIconModule
+    ]
+
+# Liaison de propriété
+    créer un composant dynamique
+        utiliser @Input dans la partie typscript du composant
+    <app-icon-button name="" title="play_circle">
+
+    
+En Angular, il existe 2 manières de lier les variables (du typescript) à la vue. Nous abons les liaisons unidirectionnelles et les liaisons bidirectionnels.
+- `Liaison undirectionnelles` :  encore appelés one-way binding transfèrent les données d'un composant(depuis le ts) vers le DOM (html)
+    * Interpolation : 
+            utilisée pour incorporer  des valeurs de variables dans des chaîne de texte. Par exemple {{variable}}
+    * Liaison des propriétés (property binding) :
+            permet de lier une propriétés d'un élément du DOM à une propriété du composant. La syntaxe utilise des crochets. Par exemple, [property]="varible"
+    * Liaison des évènements (event binding) :
+            perment de réagir aux événements du DOM (comme les clics, les changements, les scrolls...). La syntaxe utilise les parenthèses. Par exemple, (click)="handleClick()"
+
+- `Liaisons bidirectionnels.`
+
+
+# passage d'une valeur du parent à l'enfant: @Input()
+
+# passage d'une valeur de l'enfant au parent: @Output()
